@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace JwtWebApi.Controllers
 {
@@ -20,6 +21,7 @@ namespace JwtWebApi.Controllers
         }
 
         [HttpGet(Name = "GetWeatherForecast"), Authorize(Roles = "Admin")]
+        
         public IEnumerable<WeatherForecast> Get()
         {
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
@@ -29,6 +31,16 @@ namespace JwtWebApi.Controllers
                 Summary = Summaries[Random.Shared.Next(Summaries.Length)]
             })
             .ToArray();
+        }
+        [Authorize]
+        [HttpGet]
+        [Route("api/[controller]")]
+        public ActionResult<string> GetMe()
+        {
+            var username = User.Identity.Name;
+            var username2 = User.FindFirstValue(ClaimTypes.Name);
+            var role = User.FindFirstValue(ClaimTypes.Role);
+            return Ok(new { username, username2, role });
         }
     }
 }

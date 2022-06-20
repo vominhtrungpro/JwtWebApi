@@ -68,7 +68,7 @@ namespace JwtWebApi.Controllers
             string token = CreateToken(user);
             var refreshtoken = GenerateRefreshToken();
             SetRefreshToken(refreshtoken);
-            return Ok(new { user, token, refreshtoken });
+            return Ok(new { token, refreshtoken });
         }
 
         [HttpPost("refresh-token"),Authorize]

@@ -24,7 +24,8 @@ namespace JwtWebApi.Controllers
             _userService = userService;
         }
 
-        [HttpGet, Authorize]
+        [HttpGet]
+        [Route("get-me1")]
         public ActionResult<string> GetMe()
         {
             //var username = _userService.GetMyName();
@@ -161,6 +162,13 @@ namespace JwtWebApi.Controllers
                 var computedHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(password));
                 return computedHash.SequenceEqual(PasswordHash);
             }
+        }
+        [Authorize]
+        [HttpGet]
+        [Route("get-me2")]
+        public ActionResult<string> GetMe1()
+        {
+            return Ok("ABC");
         }
     }
 }

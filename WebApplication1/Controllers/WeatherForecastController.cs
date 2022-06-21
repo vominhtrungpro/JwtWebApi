@@ -23,6 +23,7 @@ namespace WebApplication1.Controllers
         }
 
         [HttpGet(Name = "GetWeatherForecast")]
+        [Authorize]
         public IEnumerable<WeatherForecast> Get()
         {
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
@@ -33,17 +34,92 @@ namespace WebApplication1.Controllers
             })
             .ToArray();
         }
-        [AllowAnonymous]
         [Route("CallAPI")]
         [HttpGet]
+        [Authorize]
         public async Task<IActionResult> CallAPI()
         {
             //CALL GET
             using (var client = new HttpClient())
             {
+                client.BaseAddress = new Uri("https://localhost:7133/");
+
+                using (HttpResponseMessage response = await client.GetAsync("api/Auth/get-me2"))
+                {
+                    var responseContent = response.Content.ReadAsStringAsync().Result;
+                    response.EnsureSuccessStatusCode();
+                    return Ok(responseContent);
+                }
+            }
+        }
+        [AllowAnonymous]
+        [Route("CallAPI")]
+        [HttpPost]
+        public async Task<IActionResult> CallPostAPI()
+        {
+            // CALL POST
+            using (var client = new HttpClient())
+            {
                 client.BaseAddress = new Uri("https://jsonplaceholder.typicode.com/");
 
-                using (HttpResponseMessage response = await client.GetAsync("todos/1"))
+                var postData = new
+                {
+                    title = "foo",
+                    body = "bar",
+                    userId = 1
+                };
+
+                var content = new StringContent(JsonConvert.SerializeObject(postData), Encoding.UTF8, "application/json");
+                using (HttpResponseMessage response = await client.PostAsync("posts", content))
+                {
+                    var responseContent = response.Content.ReadAsStringAsync().Result;
+                    response.EnsureSuccessStatusCode();
+
+                    return Ok(responseContent);
+                }
+
+            }
+        }
+        [AllowAnonymous]
+        [Route("CallAPI")]
+        [HttpPut]
+        public async Task<IActionResult> CallPutAPI()
+        {
+            // CALL PUT
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri("https://jsonplaceholder.typicode.com/");
+
+                var postData = new
+                {
+                    title = "foo",
+                    body = "bar",
+                    userId = 1,
+                    id = 1
+                };
+                var content = new StringContent(JsonConvert.SerializeObject(postData), Encoding.UTF8, "application/json");
+
+                using (HttpResponseMessage response = await client.PutAsync("todos/1", content))
+                {
+                    var responseContent = response.Content.ReadAsStringAsync().Result;
+                    response.EnsureSuccessStatusCode();
+
+                    return Ok(responseContent);
+                }
+
+            }
+        }
+        [AllowAnonymous]
+        [Route("CallAPI")]
+        [HttpDelete]
+        public async Task<IActionResult> CallDeleteAPI()
+        {
+            //CALL DELETE
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri("https://jsonplaceholder.typicode.com/");
+
+                using (HttpResponseMessage response = await client.DeleteAsync("posts/1"))
                 {
                     var responseContent = response.Content.ReadAsStringAsync().Result;
                     response.EnsureSuccessStatusCode();
@@ -51,83 +127,6 @@ namespace WebApplication1.Controllers
                     return Ok(responseContent);
                 }
             }
-
         }
-        //[AllowAnonymous]
-        //[Route("CallAPI")]
-        //[HttpGet]
-        //public async Task<IActionResult> CallAPI()
-        //{
-        //    // CALL POST
-        //    using (var client = new HttpClient())
-        //    {
-        //        client.BaseAddress = new Uri("https://jsonplaceholder.typicode.com/");
-
-        //        var postData = new
-        //        {
-        //            title = "foo",
-        //            body = "bar",
-        //            userId = 1
-        //        };
-
-        //        var content = new StringContent(JsonConvert.SerializeObject(postData), Encoding.UTF8, "application/json");
-        //        using (HttpResponseMessage response = await client.PostAsync("posts", content))
-        //        {
-        //            var responseContent = response.Content.ReadAsStringAsync().Result;
-        //            response.EnsureSuccessStatusCode();
-
-        //            return Ok(responseContent);
-        //        }
-
-        //    }
-        //}
-        //[AllowAnonymous]
-        //[Route("CallAPI")]
-        //[HttpGet]
-        //public async Task<IActionResult> CallAPI()
-        //{
-        //    // CALL PUT
-        //    using (var client = new HttpClient())
-        //    {
-        //        client.BaseAddress = new Uri("https://jsonplaceholder.typicode.com/");
-
-        //        var postData = new
-        //        {
-        //            title = "foo",
-        //            body = "bar",
-        //            userId = 1,
-        //            id = 1
-        //        };
-        //        var content = new StringContent(JsonConvert.SerializeObject(postData), Encoding.UTF8, "application/json");
-
-        //        using (HttpResponseMessage response = await client.PutAsync("todos/1", content))
-        //        {
-        //            var responseContent = response.Content.ReadAsStringAsync().Result;
-        //            response.EnsureSuccessStatusCode();
-
-        //            return Ok(responseContent);
-        //        }
-
-        //    }
-        //}
-        //[AllowAnonymous]
-        //[Route("CallAPI")]
-        //[HttpGet]
-        //public async Task<IActionResult> CallAPI()
-        //{
-        //     CALL DELETE
-        //    using (var client = new HttpClient())
-        //    {
-        //        client.BaseAddress = new Uri("https://jsonplaceholder.typicode.com/");
-
-        //        using (HttpResponseMessage response = await client.DeleteAsync("posts/1"))
-        //        {
-        //            var responseContent = response.Content.ReadAsStringAsync().Result;
-        //            response.EnsureSuccessStatusCode();
-
-        //            return Ok(responseContent);
-        //        }
-        //    }
-        //}
     }
 }

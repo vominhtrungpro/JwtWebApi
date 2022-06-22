@@ -54,7 +54,7 @@ namespace WebApplication1.Controllers
 
                 client.BaseAddress = new Uri("https://localhost:7133/");
 
-                using (HttpResponseMessage response = await client.GetAsync("api/Auth/get-authorized"))
+                using (HttpResponseMessage response = await client.GetAsync("api/Auth/authorized"))
                 {
                     var responseContent = response.Content.ReadAsStringAsync().Result;
                     response.EnsureSuccessStatusCode();

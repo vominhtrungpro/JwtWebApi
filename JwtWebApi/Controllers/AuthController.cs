@@ -25,7 +25,7 @@ namespace JwtWebApi.Controllers
         }
 
         [HttpGet]
-        [Route("get-me1")]
+        [Route("get-me")]
         public ActionResult<string> GetMe()
         {
             //var username = _userService.GetMyName();

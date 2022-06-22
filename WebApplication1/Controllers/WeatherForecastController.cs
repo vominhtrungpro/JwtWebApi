@@ -40,10 +40,10 @@ namespace WebApplication1.Controllers
             })
             .ToArray();
         }
-        [Route("CallAPI")]
+        [Route("get-authorized-request")]
         [HttpGet]
         [Authorize]
-        public async Task<IActionResult> CallAPI()
+        public async Task<IActionResult> CallAPIGet()
         {
             var token = await HttpContext.GetTokenAsync("access_token");
             //CALL GET
@@ -62,9 +62,9 @@ namespace WebApplication1.Controllers
             }
         }
         [AllowAnonymous]
-        [Route("CallAPI")]
+        [Route("login-request")]
         [HttpPost]
-        public async Task<IActionResult> CallPostAPI()
+        public async Task<IActionResult> CallAPIPost()
         {
             // CALL POST
             using (var client = new HttpClient())
@@ -88,9 +88,9 @@ namespace WebApplication1.Controllers
             }
         }
         [AllowAnonymous]
-        [Route("CallAPI")]
+        [Route("demo-put-request")]
         [HttpPut]
-        public async Task<IActionResult> CallPutAPI()
+        public async Task<IActionResult> CallPutAPIPut()
         {
             // CALL PUT
             using (var client = new HttpClient())
@@ -116,9 +116,9 @@ namespace WebApplication1.Controllers
             }
         }
         [AllowAnonymous]
-        [Route("CallAPI")]
+        [Route("demo-delete-request")]
         [HttpDelete]
-        public async Task<IActionResult> CallDeleteAPI()
+        public async Task<IActionResult> CallDeleteAPIDelete()
         {
             //CALL DELETE
             using (var client = new HttpClient())

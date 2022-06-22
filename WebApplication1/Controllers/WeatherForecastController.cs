@@ -17,7 +17,7 @@ namespace WebApplication1.Controllers
         private static readonly string[] Summaries = new[]
         {
         "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-    };
+        };
 
         private readonly ILogger<WeatherForecastController> _logger;
         private readonly IConfiguration _configuration;
@@ -49,9 +49,7 @@ namespace WebApplication1.Controllers
             //CALL GET
             using (var client = new HttpClient())
             {
-
-
-                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", token);
 
                 client.BaseAddress = new Uri("https://localhost:7133/");
 
@@ -87,7 +85,6 @@ namespace WebApplication1.Controllers
 
                     return Ok(responseContent);
                 }
-
             }
         }
         [AllowAnonymous]
@@ -116,7 +113,6 @@ namespace WebApplication1.Controllers
 
                     return Ok(responseContent);
                 }
-
             }
         }
         [AllowAnonymous]
@@ -138,6 +134,5 @@ namespace WebApplication1.Controllers
                 }
             }
         }
-
     }
 }

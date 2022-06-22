@@ -24,18 +24,18 @@ namespace JwtWebApi.Controllers
             _userService = userService;
         }
 
-        //[HttpGet]
-        //[Route("get-me1")]
-        //public ActionResult<string> GetMe()
-        //{
-        //    //var username = _userService.GetMyName();
-        //    //return Ok(username);
+        [HttpGet]
+        [Route("get-me1")]
+        public ActionResult<string> GetMe()
+        {
+            //var username = _userService.GetMyName();
+            //return Ok(username);
 
-        //    var username = User?.Identity?.Name;
-        //    var username2 = User.FindFirstValue(ClaimTypes.Name);
-        //    var role = User.FindFirstValue(ClaimTypes.Role);
-        //    return Ok(new { username, username2, role });
-        //}
+            var username = User?.Identity?.Name;
+            var username2 = User.FindFirstValue(ClaimTypes.Name);
+            var role = User.FindFirstValue(ClaimTypes.Role);
+            return Ok(new { username, username2, role });
+        }
 
         [HttpPost("register")]
         public async Task<ActionResult<User>> Register(UserDto request)
@@ -50,8 +50,7 @@ namespace JwtWebApi.Controllers
             user.Username = request.Username;
             user.PasswordHash = passwordHash;
             user.PasswordSalt = passwordSalt;
-
-            
+   
             return Ok(user);
         }
 
@@ -91,7 +90,6 @@ namespace JwtWebApi.Controllers
                 SetRefreshToken(newRefreshToken);
                 return Ok(new { user, token, refreshToken });
             }
-            
         }
 
         private RefreshToken GenerateRefreshToken()
@@ -106,6 +104,7 @@ namespace JwtWebApi.Controllers
             };
             return refreshtoken;
         }
+
         private void SetRefreshToken(RefreshToken newRefreshToken)
         {
             var cookieOptions = new CookieOptions
@@ -118,6 +117,7 @@ namespace JwtWebApi.Controllers
             user.TokenCreated = newRefreshToken.Created;
             user.TokenExpires = newRefreshToken.Expires;
         }
+
         private string CreateToken(User user)
         {
             List<Claim> claims = new List<Claim>
@@ -166,7 +166,7 @@ namespace JwtWebApi.Controllers
         [Authorize]
         [HttpGet]
         [Route("get-authorized")]
-        public ActionResult<string> Get()
+        public ActionResult<string> GetMeAuthorized()
         {
             return Ok("Get succeed");
         }

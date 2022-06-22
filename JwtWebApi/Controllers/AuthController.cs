@@ -24,18 +24,18 @@ namespace JwtWebApi.Controllers
             _userService = userService;
         }
 
-        [HttpGet]
-        [Route("get-me1")]
-        public ActionResult<string> GetMe()
-        {
-            //var username = _userService.GetMyName();
-            //return Ok(username);
+        //[HttpGet]
+        //[Route("get-me1")]
+        //public ActionResult<string> GetMe()
+        //{
+        //    //var username = _userService.GetMyName();
+        //    //return Ok(username);
 
-            var username = User?.Identity?.Name;
-            var username2 = User.FindFirstValue(ClaimTypes.Name);
-            var role = User.FindFirstValue(ClaimTypes.Role);
-            return Ok(new { username, username2, role });
-        }
+        //    var username = User?.Identity?.Name;
+        //    var username2 = User.FindFirstValue(ClaimTypes.Name);
+        //    var role = User.FindFirstValue(ClaimTypes.Role);
+        //    return Ok(new { username, username2, role });
+        //}
 
         [HttpPost("register")]
         public async Task<ActionResult<User>> Register(UserDto request)
@@ -165,10 +165,10 @@ namespace JwtWebApi.Controllers
         }
         [Authorize]
         [HttpGet]
-        [Route("get-me2")]
-        public ActionResult<string> GetMe1()
+        [Route("get-authorized")]
+        public ActionResult<string> Get()
         {
-            return Ok("ABC");
+            return Ok("Get succeed");
         }
     }
 }

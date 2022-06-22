@@ -32,7 +32,6 @@ namespace JwtWebApi.Controllers
             })
             .ToArray();
         }
-        [Authorize]
         [HttpGet]
         [Route("api/[controller]")]
         public ActionResult<string> GetMe()

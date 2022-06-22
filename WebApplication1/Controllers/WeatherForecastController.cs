@@ -3,6 +3,10 @@ using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.Security.Claims;
 using System.Text;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
+using System.Net.Http.Headers;
+using Microsoft.AspNetCore.Authentication;
 
 namespace WebApplication1.Controllers
 {
@@ -16,10 +20,12 @@ namespace WebApplication1.Controllers
     };
 
         private readonly ILogger<WeatherForecastController> _logger;
+        private readonly IConfiguration _configuration;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public WeatherForecastController(ILogger<WeatherForecastController> logger, IConfiguration configuration)
         {
             _logger = logger;
+            _configuration = configuration;
         }
 
         [HttpGet(Name = "GetWeatherForecast")]
@@ -39,12 +45,17 @@ namespace WebApplication1.Controllers
         [Authorize]
         public async Task<IActionResult> CallAPI()
         {
+            var token = await HttpContext.GetTokenAsync("access_token");
             //CALL GET
             using (var client = new HttpClient())
             {
+
+
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+
                 client.BaseAddress = new Uri("https://localhost:7133/");
 
-                using (HttpResponseMessage response = await client.GetAsync("api/Auth/get-me2"))
+                using (HttpResponseMessage response = await client.GetAsync("api/Auth/get-authorized"))
                 {
                     var responseContent = response.Content.ReadAsStringAsync().Result;
                     response.EnsureSuccessStatusCode();
@@ -60,17 +71,16 @@ namespace WebApplication1.Controllers
             // CALL POST
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("https://jsonplaceholder.typicode.com/");
+                client.BaseAddress = new Uri("https://localhost:7133/");
 
                 var postData = new
                 {
-                    title = "foo",
-                    body = "bar",
-                    userId = 1
+                    username = "string",
+                    password = "string"
                 };
 
                 var content = new StringContent(JsonConvert.SerializeObject(postData), Encoding.UTF8, "application/json");
-                using (HttpResponseMessage response = await client.PostAsync("posts", content))
+                using (HttpResponseMessage response = await client.PostAsync("api/Auth/login", content))
                 {
                     var responseContent = response.Content.ReadAsStringAsync().Result;
                     response.EnsureSuccessStatusCode();
@@ -128,5 +138,6 @@ namespace WebApplication1.Controllers
                 }
             }
         }
+
     }
 }

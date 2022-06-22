@@ -21,7 +21,6 @@ namespace JwtWebApi.Controllers
         }
 
         [HttpGet(Name = "GetWeatherForecast"), Authorize(Roles = "Admin")]
-        
         public IEnumerable<WeatherForecast> Get()
         {
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
@@ -32,6 +31,7 @@ namespace JwtWebApi.Controllers
             })
             .ToArray();
         }
+
         [HttpGet]
         [Route("api/[controller]")]
         public ActionResult<string> GetMe()

@@ -40,7 +40,8 @@ namespace WebApplication1.Controllers
             })
             .ToArray();
         }
-        [Route("get-authorized-request")]
+
+        [Route("authorized-request")]
         [HttpGet]
         [Authorize]
         public async Task<IActionResult> CallAPIGet()
@@ -61,6 +62,7 @@ namespace WebApplication1.Controllers
                 }
             }
         }
+
         [AllowAnonymous]
         [Route("login-request")]
         [HttpPost]
@@ -87,10 +89,11 @@ namespace WebApplication1.Controllers
                 }
             }
         }
+
         [AllowAnonymous]
-        [Route("demo-put-request")]
+        [Route("demo-request")]
         [HttpPut]
-        public async Task<IActionResult> CallPutAPIPut()
+        public async Task<IActionResult> CallAPIPut()
         {
             // CALL PUT
             using (var client = new HttpClient())
@@ -115,10 +118,11 @@ namespace WebApplication1.Controllers
                 }
             }
         }
+
         [AllowAnonymous]
-        [Route("demo-delete-request")]
+        [Route("demo-request")]
         [HttpDelete]
-        public async Task<IActionResult> CallDeleteAPIDelete()
+        public async Task<IActionResult> CallAPIDelete()
         {
             //CALL DELETE
             using (var client = new HttpClient())

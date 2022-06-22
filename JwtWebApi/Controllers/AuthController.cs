@@ -163,9 +163,10 @@ namespace JwtWebApi.Controllers
                 return computedHash.SequenceEqual(PasswordHash);
             }
         }
+
         [Authorize]
         [HttpGet]
-        [Route("get-authorized")]
+        [Route("authorized")]
         public ActionResult<string> GetMeAuthorized()
         {
             return Ok("Get succeed");

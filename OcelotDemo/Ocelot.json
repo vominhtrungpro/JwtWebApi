@@ -9,7 +9,7 @@
           "Port": 7133
         }
       ],
-      "UpstreamPathTemplate": "/1",
+      "UpstreamPathTemplate": "/api/Auth/get-me",
       "UpstreamHttpMethod": [ "Get" ]
     },
     {
@@ -21,7 +21,7 @@
           "Port": 7031
         }
       ],
-      "UpstreamPathTemplate": "/2",
+      "UpstreamPathTemplate": "/WeatherForecast/authorized-request",
       "UpstreamHttpMethod": [ "Get" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "Bearer",

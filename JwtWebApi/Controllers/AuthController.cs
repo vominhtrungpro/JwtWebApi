@@ -17,27 +17,40 @@ namespace JwtWebApi.Controllers
 
         private readonly IConfiguration _configuration;
         private readonly IUserService _userService;
+        private readonly ILogger<WeatherForecastController> _logger;
 
-        public AuthController(IConfiguration configuration, IUserService userService)
+        public AuthController(IConfiguration configuration, IUserService userService, ILogger<WeatherForecastController> logger)
         {
             _configuration = configuration;
             _userService = userService;
+            _logger = logger;
         }
 
         [HttpPost("register")]
         public async Task<ActionResult<User>> Register(UserDto request)
         {
-            if (user.Username == request.Username)
+            _logger.LogInformation("Start Register");
+            try
             {
-                return BadRequest("User exist.");
+                if (user.Username == request.Username)
+                {
+                    return BadRequest("User exist.");
+                }
+
+                CreatePasswordHash(request.Password, out byte[] passwordHash, out byte[] passwordSalt);
+
+                user.Username = request.Username;
+                user.PasswordHash = passwordHash;
+                user.PasswordSalt = passwordSalt;
             }
+            catch (Exception e)
+            {
+                
+                _logger.LogInformation("Error", e);
+                throw new Exception();
 
-            CreatePasswordHash(request.Password, out byte[] passwordHash, out byte[] passwordSalt);
-
-            user.Username = request.Username;
-            user.PasswordHash = passwordHash;
-            user.PasswordSalt = passwordSalt;
-   
+            }
+            _logger.LogInformation("Register succeed username: {0}", user.Username);
             return Ok(user);
         }
 
@@ -156,6 +169,15 @@ namespace JwtWebApi.Controllers
         [Route("authorized")]
         public ActionResult<string> GetMeAuthorized()
         {
+            _logger.LogInformation("GetMe");
+            try
+            {
+
+            }
+            catch (Exception e)
+            {
+                _logger.LogError("Exception thrown...", e);
+            }
             return Ok("Get succeed with authorized");
         }
 
@@ -163,6 +185,15 @@ namespace JwtWebApi.Controllers
         [Route("get-me")]
         public ActionResult<string> GetMe()
         {
+            _logger.LogInformation("GetMe");
+            try
+            {
+                
+            }
+            catch (Exception)
+            {
+                _logger.LogError("Exception thrown...");
+            }
             return Ok("Get succeed without authorized");
         }
     }

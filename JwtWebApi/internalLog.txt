@@ -1,0 +1,114 @@
+2022-06-23 11:12:36.8733 Info Message Template Auto Format enabled
+2022-06-23 11:12:36.8878 Info Loading assembly: NLog.Web.AspNetCore
+2022-06-23 11:12:36.9629 Info Adding target FileTarget(Name=alldata)
+2022-06-23 11:12:36.9629 Info Adding target FileTarget(Name=otherFile-web)
+2022-06-23 11:12:37.0037 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=C:\Users\Trung.Vo\source\repos\JwtWebApi\JwtWebApi\bin\Debug\net6.0\NLog.config
+2022-06-23 11:12:37.8733 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=C:\Users\Trung.Vo\source\repos\JwtWebApi\JwtWebApi\bin\Debug\net6.0\NLog.config
+2022-06-23 11:14:25.5085 Info Message Template Auto Format enabled
+2022-06-23 11:14:25.5085 Info Loading assembly: NLog.Web.AspNetCore
+2022-06-23 11:14:25.6290 Info Adding target FileTarget(Name=alldata)
+2022-06-23 11:14:25.6411 Info Adding target FileTarget(Name=otherFile-web)
+2022-06-23 11:14:25.6835 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=C:\Users\Trung.Vo\source\repos\JwtWebApi\JwtWebApi\bin\Debug\net6.0\NLog.config
+2022-06-23 11:14:26.4480 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=C:\Users\Trung.Vo\source\repos\JwtWebApi\JwtWebApi\bin\Debug\net6.0\NLog.config
+2022-06-23 11:14:57.7710 Info Message Template Auto Format enabled
+2022-06-23 11:14:57.7998 Info Loading assembly: NLog.Web.AspNetCore
+2022-06-23 11:14:57.9763 Info Adding target FileTarget(Name=alldata)
+2022-06-23 11:14:57.9763 Info Adding target FileTarget(Name=otherFile-web)
+2022-06-23 11:14:58.0294 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=C:\Users\Trung.Vo\source\repos\JwtWebApi\JwtWebApi\bin\Debug\net6.0\NLog.config
+2022-06-23 11:14:58.8348 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=C:\Users\Trung.Vo\source\repos\JwtWebApi\JwtWebApi\bin\Debug\net6.0\NLog.config
+2022-06-23 11:16:01.0601 Info Message Template Auto Format enabled
+2022-06-23 11:16:01.0748 Info Loading assembly: NLog.Web.AspNetCore
+2022-06-23 11:16:01.1775 Info Adding target FileTarget(Name=alldata)
+2022-06-23 11:16:01.1836 Info Adding target FileTarget(Name=otherFile-web)
+2022-06-23 11:16:01.2187 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=C:\Users\Trung.Vo\source\repos\JwtWebApi\JwtWebApi\bin\Debug\net6.0\NLog.config
+2022-06-23 11:16:01.8456 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=C:\Users\Trung.Vo\source\repos\JwtWebApi\JwtWebApi\bin\Debug\net6.0\NLog.config
+2022-06-23 11:18:20.6965 Info Message Template Auto Format enabled
+2022-06-23 11:18:20.6965 Info Loading assembly: NLog.Web.AspNetCore
+2022-06-23 11:18:20.7790 Info Adding target FileTarget(Name=alldata)
+2022-06-23 11:18:20.7790 Info Adding target FileTarget(Name=otherFile-web)
+2022-06-23 11:18:20.8338 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=C:\Users\Trung.Vo\source\repos\JwtWebApi\JwtWebApi\bin\Debug\net6.0\NLog.config
+2022-06-23 11:18:21.5071 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=C:\Users\Trung.Vo\source\repos\JwtWebApi\JwtWebApi\bin\Debug\net6.0\NLog.config
+2022-06-23 11:21:25.2231 Info Message Template Auto Format enabled
+2022-06-23 11:21:25.2395 Info Loading assembly: NLog.Web.AspNetCore
+2022-06-23 11:21:25.3305 Info Adding target FileTarget(Name=alldata)
+2022-06-23 11:21:25.3409 Info Adding target FileTarget(Name=otherFile-web)
+2022-06-23 11:21:25.3858 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=C:\Users\Trung.Vo\source\repos\JwtWebApi\JwtWebApi\bin\Debug\net6.0\NLog.config
+2022-06-23 11:21:26.0618 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=C:\Users\Trung.Vo\source\repos\JwtWebApi\JwtWebApi\bin\Debug\net6.0\NLog.config
+2022-06-23 11:23:15.3656 Info Message Template Auto Format enabled
+2022-06-23 11:23:15.3784 Info Loading assembly: NLog.Web.AspNetCore
+2022-06-23 11:23:15.4486 Info Adding target FileTarget(Name=alldata)
+2022-06-23 11:23:15.4486 Info Adding target FileTarget(Name=otherFile-web)
+2022-06-23 11:23:15.4955 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=C:\Users\Trung.Vo\source\repos\JwtWebApi\JwtWebApi\bin\Debug\net6.0\NLog.config
+2022-06-23 11:23:16.1700 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=C:\Users\Trung.Vo\source\repos\JwtWebApi\JwtWebApi\bin\Debug\net6.0\NLog.config
+2022-06-23 11:25:31.2022 Info Message Template Auto Format enabled
+2022-06-23 11:25:31.2173 Info Loading assembly: NLog.Web.AspNetCore
+2022-06-23 11:25:31.3066 Info Adding target FileTarget(Name=alldata)
+2022-06-23 11:25:31.3066 Info Adding target FileTarget(Name=otherFile-web)
+2022-06-23 11:25:31.3623 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=C:\Users\Trung.Vo\source\repos\JwtWebApi\JwtWebApi\bin\Debug\net6.0\NLog.config
+2022-06-23 11:25:32.1439 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=C:\Users\Trung.Vo\source\repos\JwtWebApi\JwtWebApi\bin\Debug\net6.0\NLog.config
+2022-06-23 11:33:56.4215 Info Message Template Auto Format enabled
+2022-06-23 11:33:56.4353 Info Loading assembly: NLog.Web.AspNetCore
+2022-06-23 11:33:56.5121 Info Adding target FileTarget(Name=alldata)
+2022-06-23 11:33:56.5235 Info Adding target FileTarget(Name=otherFile-web)
+2022-06-23 11:33:56.5636 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=C:\Users\Trung.Vo\source\repos\JwtWebApi\JwtWebApi\bin\Debug\net6.0\NLog.config
+2022-06-23 11:33:57.2499 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=C:\Users\Trung.Vo\source\repos\JwtWebApi\JwtWebApi\bin\Debug\net6.0\NLog.config
+2022-06-23 11:38:23.4912 Info Message Template Auto Format enabled
+2022-06-23 11:38:23.5022 Info Loading assembly: NLog.Web.AspNetCore
+2022-06-23 11:38:23.5866 Info Adding target FileTarget(Name=alldata)
+2022-06-23 11:38:23.6012 Info Adding target FileTarget(Name=otherFile-web)
+2022-06-23 11:38:23.6861 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=C:\Users\Trung.Vo\source\repos\JwtWebApi\JwtWebApi\bin\Debug\net6.0\NLog.config
+2022-06-23 11:38:24.3644 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=C:\Users\Trung.Vo\source\repos\JwtWebApi\JwtWebApi\bin\Debug\net6.0\NLog.config
+2022-06-23 11:41:07.6366 Info Message Template Auto Format enabled
+2022-06-23 11:41:07.6511 Info Loading assembly: NLog.Web.AspNetCore
+2022-06-23 11:41:07.7370 Info Adding target FileTarget(Name=alldata)
+2022-06-23 11:41:07.7429 Info Adding target FileTarget(Name=otherFile-web)
+2022-06-23 11:41:07.7851 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=C:\Users\Trung.Vo\source\repos\JwtWebApi\JwtWebApi\bin\Debug\net6.0\NLog.config
+2022-06-23 11:41:08.5129 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=C:\Users\Trung.Vo\source\repos\JwtWebApi\JwtWebApi\bin\Debug\net6.0\NLog.config
+2022-06-23 11:42:49.9976 Info Message Template Auto Format enabled
+2022-06-23 11:42:50.0127 Info Loading assembly: NLog.Web.AspNetCore
+2022-06-23 11:42:50.0954 Info Adding target FileTarget(Name=alldata)
+2022-06-23 11:42:50.1038 Info Adding target FileTarget(Name=otherFile-web)
+2022-06-23 11:42:50.1452 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=C:\Users\Trung.Vo\source\repos\JwtWebApi\JwtWebApi\bin\Debug\net6.0\NLog.config
+2022-06-23 11:42:50.8068 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=C:\Users\Trung.Vo\source\repos\JwtWebApi\JwtWebApi\bin\Debug\net6.0\NLog.config
+2022-06-23 11:46:57.6630 Info Message Template Auto Format enabled
+2022-06-23 11:46:57.6743 Info Loading assembly: NLog.Web.AspNetCore
+2022-06-23 11:46:57.7549 Info Adding target FileTarget(Name=alldata)
+2022-06-23 11:46:57.7616 Info Adding target FileTarget(Name=otherFile-web)
+2022-06-23 11:46:57.8071 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=C:\Users\Trung.Vo\source\repos\JwtWebApi\JwtWebApi\bin\Debug\net6.0\NLog.config
+2022-06-23 11:46:58.5152 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=C:\Users\Trung.Vo\source\repos\JwtWebApi\JwtWebApi\bin\Debug\net6.0\NLog.config
+2022-06-23 11:48:19.5194 Info Message Template Auto Format enabled
+2022-06-23 11:48:19.5306 Info Loading assembly: NLog.Web.AspNetCore
+2022-06-23 11:48:19.5981 Info Adding target FileTarget(Name=alldata)
+2022-06-23 11:48:19.6041 Info Adding target FileTarget(Name=otherFile-web)
+2022-06-23 11:48:19.6411 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=C:\Users\Trung.Vo\source\repos\JwtWebApi\JwtWebApi\bin\Debug\net6.0\NLog.config
+2022-06-23 11:48:20.3321 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=C:\Users\Trung.Vo\source\repos\JwtWebApi\JwtWebApi\bin\Debug\net6.0\NLog.config
+2022-06-23 11:48:35.4501 Info Message Template Auto Format enabled
+2022-06-23 11:48:35.4721 Info Loading assembly: NLog.Web.AspNetCore
+2022-06-23 11:48:35.5601 Info Adding target FileTarget(Name=alldata)
+2022-06-23 11:48:35.5601 Info Adding target FileTarget(Name=otherFile-web)
+2022-06-23 11:48:35.6131 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=C:\Users\Trung.Vo\source\repos\JwtWebApi\JwtWebApi\bin\Debug\net6.0\NLog.config
+2022-06-23 11:48:36.3773 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=C:\Users\Trung.Vo\source\repos\JwtWebApi\JwtWebApi\bin\Debug\net6.0\NLog.config
+2022-06-23 11:49:00.7850 Info Message Template Auto Format enabled
+2022-06-23 11:49:00.8132 Info Loading assembly: NLog.Web.AspNetCore
+2022-06-23 11:49:00.8974 Info Adding target FileTarget(Name=alldata)
+2022-06-23 11:49:00.9033 Info Adding target FileTarget(Name=otherFile-web)
+2022-06-23 11:49:00.9405 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=C:\Users\Trung.Vo\source\repos\JwtWebApi\JwtWebApi\bin\Debug\net6.0\NLog.config
+2022-06-23 11:49:01.7514 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=C:\Users\Trung.Vo\source\repos\JwtWebApi\JwtWebApi\bin\Debug\net6.0\NLog.config
+2022-06-23 11:50:03.3948 Info Message Template Auto Format enabled
+2022-06-23 11:50:03.4332 Info Loading assembly: NLog.Web.AspNetCore
+2022-06-23 11:50:03.5526 Info Adding target FileTarget(Name=alldata)
+2022-06-23 11:50:03.5714 Info Adding target FileTarget(Name=otherFile-web)
+2022-06-23 11:50:03.6090 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=C:\Users\Trung.Vo\source\repos\JwtWebApi\JwtWebApi\bin\Debug\net6.0\NLog.config
+2022-06-23 11:50:05.2936 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=C:\Users\Trung.Vo\source\repos\JwtWebApi\JwtWebApi\bin\Debug\net6.0\NLog.config
+2022-06-23 11:51:20.7689 Info Message Template Auto Format enabled
+2022-06-23 11:51:20.7788 Info Loading assembly: NLog.Web.AspNetCore
+2022-06-23 11:51:20.8427 Info Adding target FileTarget(Name=alldata)
+2022-06-23 11:51:20.8427 Info Adding target FileTarget(Name=otherFile-web)
+2022-06-23 11:51:20.8826 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=C:\Users\Trung.Vo\source\repos\JwtWebApi\JwtWebApi\bin\Debug\net6.0\NLog.config
+2022-06-23 11:51:21.4126 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=C:\Users\Trung.Vo\source\repos\JwtWebApi\JwtWebApi\bin\Debug\net6.0\NLog.config
+2022-06-23 11:57:13.8633 Info Message Template Auto Format enabled
+2022-06-23 11:57:13.8754 Info Loading assembly: NLog.Web.AspNetCore
+2022-06-23 11:57:13.9667 Info Adding target FileTarget(Name=alldata)
+2022-06-23 11:57:13.9667 Info Adding target FileTarget(Name=otherFile-web)
+2022-06-23 11:57:14.0278 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=C:\Users\Trung.Vo\source\repos\JwtWebApi\JwtWebApi\bin\Debug\net6.0\NLog.config
+2022-06-23 11:57:14.6763 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=C:\Users\Trung.Vo\source\repos\JwtWebApi\JwtWebApi\bin\Debug\net6.0\NLog.config

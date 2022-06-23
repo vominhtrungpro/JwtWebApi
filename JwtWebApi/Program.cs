@@ -89,6 +89,7 @@ catch (Exception ex)
 }
 finally
 {
+    logger.Debug("App End.");
     NLog.LogManager.Shutdown();
 }
 

@@ -23,6 +23,7 @@ namespace JwtWebApi.Controllers
         [HttpGet(Name = "GetWeatherForecast"), Authorize(Roles = "Admin")]
         public IEnumerable<WeatherForecast> Get()
         {
+            _logger.LogInformation("Hello, this is the index!");
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),

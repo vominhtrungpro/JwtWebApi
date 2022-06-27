@@ -6,8 +6,7 @@ using Swashbuckle.AspNetCore.Filters;
 using System.Text;
 using NLog;
 using NLog.Web;
-
-
+using System.Diagnostics;
 
 var logger = NLog.LogManager.Setup().LoadConfigurationFromAppSettings().GetCurrentClassLogger();
 
@@ -92,4 +91,3 @@ finally
     logger.Debug("App End.");
     NLog.LogManager.Shutdown();
 }
-

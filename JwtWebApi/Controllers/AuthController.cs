@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
+using System.Diagnostics;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Security.Cryptography;
@@ -17,9 +18,9 @@ namespace JwtWebApi.Controllers
 
         private readonly IConfiguration _configuration;
         private readonly IUserService _userService;
-        private readonly ILogger<WeatherForecastController> _logger;
+        private readonly ILogger<AuthController> _logger;
 
-        public AuthController(IConfiguration configuration, IUserService userService, ILogger<WeatherForecastController> logger)
+        public AuthController(IConfiguration configuration, IUserService userService, ILogger<AuthController> logger)
         {
             _configuration = configuration;
             _userService = userService;
@@ -29,6 +30,8 @@ namespace JwtWebApi.Controllers
         [HttpPost("register")]
         public async Task<ActionResult<User>> Register(UserDto request)
         {
+            Stopwatch timer = new Stopwatch();
+            timer.Start();
             _logger.LogInformation("Start Register");
             try
             {
@@ -50,7 +53,8 @@ namespace JwtWebApi.Controllers
                 throw new Exception();
 
             }
-            _logger.LogInformation("Register succeed username: {0}", user.Username);
+            timer.Stop();
+            _logger.LogInformation("Register succeed username: {0} in {1} s", user.Username , timer.Elapsed.TotalSeconds);
             return Ok(user);
         }
 

@@ -3,10 +3,14 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
+using MMLib.SwaggerForOcelot.DependencyInjection;
 using Ocelot.Responses;
 using System.Text;
+using Ocelot.Provider.Polly;
+
 
 var builder = WebApplication.CreateBuilder(args);
+
 
 builder.Configuration.AddJsonFile("ocelot.json");
 // Add services to the container.
@@ -14,7 +18,8 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddOcelot();
+
+
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {
@@ -46,7 +51,8 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI(c => {
+    app.UseSwaggerUI(c =>
+    {
         c.SwaggerEndpoint("/swagger/v1/swagger.json", "A");
         c.SwaggerEndpoint("https://localhost:7133/swagger/v1/swagger.json", "Service1");
 
@@ -63,12 +69,11 @@ app.UseRouting();
 
 app.UseAuthorization();
 
+
 app.UseEndpoints(endpoints =>
 {
     endpoints.MapControllers();
 });
-
-app.UseOcelot().Wait();
 
 app.UseAuthentication();
 
